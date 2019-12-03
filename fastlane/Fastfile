@@ -1,0 +1,72 @@
+require "yaml"
+
+default_platform(:ios)
+
+platform :ios do
+  #処理全体の最初で呼び出される
+  before_all do|lane, option|
+    puts("-----------------------")
+    puts("最初に呼び出されますよ #{lane}")
+    puts("-----------------------")
+    cocoapods(clean: true, podfile: "./Podfile")
+    carthage
+  end
+
+  before_each do
+    puts("-----------------------")
+    puts("毎回呼び出されますよ")
+    puts("-----------------------")
+  end
+
+  desc "どうもこんち!、こんち"
+  lane :hello do
+      puts("こんちわ")
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :test do
+    scan
+  end
+
+  lane :build do
+    gym(workspace: "fastlaneTest01.xcworkspace",
+        scheme: "fastlaneTest01",
+        configuration: "Debug",
+        clean: true,
+        output_directory: "build",
+        output_name: "myapp_debug.ipa")
+  end
+
+
+  lane :adhoc do
+    gym(workspace: "fastlaneTest01.xcworkspace",
+        scheme: "fastlaneTest01AdHoc",
+        configuration: "AdHoc",
+        clean: true,
+        output_directory: "build",
+        output_name: "myapp_adhoc.ipa")
+  end
+
+
+  lane :beta do
+    build_app(scheme: "fastlaneTest01")
+    upload_to_testflight
+  end
+
+  after_all do |lane|
+    #正常に完了した時に、Slackにメッセージ
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # エラーが発生した場合、Slackにメッセージ
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end

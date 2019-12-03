@@ -1,0 +1,59 @@
+
+#===NOTE
+# 
+# コメントアウトしているものはOption扱いです
+#
+# 有効にする場合
+#
+# 0. 対象をコメントアウト
+# 1.「carthage update --platform iOS --no-use-binaries --cache-builds」を実行
+# 2.「LinkBinary With Libraries」「RunScript(Carthage)」に追加
+#
+# Carthage参考
+# https://bit.ly/2IU8Jzg
+#
+# test
+
+#===Network
+github "ishkawa/APIKit" == 4.1.0
+github "ashleymills/Reachability.swift" == 4.3.0
+
+#===DI
+github "Swinject/Swinject" == 2.6.0
+github "Swinject/SwinjectStoryboard" == 2.2.0
+
+#===UI
+github "ReactiveX/RxSwift" == 4.4.1
+github "ninjaprox/NVActivityIndicatorView" == 4.6.1
+
+#===ImageLoader
+github "kean/Nuke" == 7.5.2
+
+#===DB
+github "realm/realm-cocoa" == 3.17.0
+
+#===ファイル保存
+#github "saoudrizwan/Disk"
+
+#===utility
+#github "Ekhoo/Device" == 3.1.2
+#github "malcommac/SwiftDate" == 4.5.1
+github "kishikawakatsumi/KeychainAccess" == 3.1.2
+github "adjust/ios_sdk"
+
+#===PushNotification
+github "NIFTYCloud-mbaas/ncmb_ios" == 3.0.1
+
+#===Firebase
+# メモ: CooaPodで入れるとBitrise上で下記テスト実行コマンド失敗するのでcarthage で入れた
+# set -v -o pipefail && env "NSUnbufferedIO=YES" xcodebuild -workspace SPN-app-ios.xcworkspace -scheme SPN-app-ios-Adhoc clean build test -destination
+# 'platform=iOS Simulator,name=iPhone X' GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES |
+# XCPRETTY_JSON_FILE_OUTPUT=xcodebuild.json xcpretty -f `xcpretty-json-formatter`
+# 参考: https://qiita.com/kyo_nanba/items/4b617a9370228606dccc
+#
+#binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json"
+#binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseFirestoreBinary.json"
+
+#===Test
+#github "Quick/Quick" ~> 1.2.0
+#github "Quick/Nimble" ~> 7.0.3

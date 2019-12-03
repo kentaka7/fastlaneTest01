@@ -1,0 +1,17 @@
+//
+//  AdHocConfig.xcconfig
+//  fastlaneTest01
+//
+//  Created by 高倉 尚裕 on 2019/12/03.
+//  Copyright © 2019 高倉 尚裕. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-fastlaneTest01/Pods-fastlaneTest01.adhoc.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER=com.fastlaneTest01.fastlaneTest01.adhoc
+// 通年期
+OTHER_SWIFT_FLAGS = $(inherited) "-Onone" "-D" "ADHOC" "-D" "COCOAPODS" "-Xfrontend" "-warn-long-function-bodies=150"
+
+DISPLAY_NAME=(adhoc)スマホで年賀状

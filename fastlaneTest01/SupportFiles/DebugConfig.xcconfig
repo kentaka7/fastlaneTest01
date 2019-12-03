@@ -1,0 +1,20 @@
+//
+//  DebugConfig.xcconfig
+//  fastlaneTest01
+//
+//  Created by 高倉 尚裕 on 2019/12/03.
+//  Copyright © 2019 高倉 尚裕. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-fastlaneTest01/Pods-fastlaneTest01.debug.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER=com.fastlaneTest01.fastlaneTest01.dev
+// 通年期
+OTHER_SWIFT_FLAGS = $(inherited) "-Onone" "-D" "DEBUG" "-D" "COCOAPODS" "-D" "ALL_SEASON" "-Xfrontend" "-warn-long-function-bodies=150"
+// 喪中期
+//OTHER_SWIFT_FLAGS = $(inherited) "-Onone" "-D" "DEBUG" "-D" "COCOAPODS" "-D" "ALL_SEASON" "-D" "MOURNING_SEASON" "-Xfrontend" "-warn-long-function-bodies=150"
+
+DISPLAY_NAME=(pre)スマホで年賀状
