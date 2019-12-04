@@ -55,6 +55,7 @@ Carthage/Build/*
 !Carthage/Build/.realm-cocoa.version
 !Carthage/Build/iOS
 Carthage/Build/iOS/*
+#下記だけは例外としてGitHubで管理
 !Carthage/Build/iOS/Realm.framework/
 !Carthage/Build/iOS/RealmSwift.framework/
 
