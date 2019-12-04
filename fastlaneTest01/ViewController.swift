@@ -6,6 +6,7 @@
 //  Copyright © 2019 高倉 尚裕. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 class ViewController: UIViewController {
