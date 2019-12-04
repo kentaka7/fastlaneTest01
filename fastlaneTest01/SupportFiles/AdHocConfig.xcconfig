@@ -11,7 +11,7 @@
 #include "Pods/Target Support Files/Pods-fastlaneTest01/Pods-fastlaneTest01.adhoc.xcconfig"
 
 PRODUCT_BUNDLE_IDENTIFIER=com.fastlaneTest01.fastlaneTest01.adhoc
-// 通年期
 OTHER_SWIFT_FLAGS = $(inherited) "-Onone" "-D" "ADHOC" "-D" "COCOAPODS" "-Xfrontend" "-warn-long-function-bodies=150"
+//OTHER_SWIFT_FLAGS = $(inherited) "-Onone" "-D" "ADHOC" "-D" "COCOAPODS" "-Xfrontend" "-debug-time-function-bodies"
 
 DISPLAY_NAME=(adhoc)スマホで年賀状
