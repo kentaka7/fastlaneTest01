@@ -1,4 +1,31 @@
 require "yaml"
+require "open-uri"
+require 'zip'
+require 'fileutils'
+#require 'byebug'
+
+def download_zip(name)
+  p name
+  puts("---------------------------------------------")
+  puts(" zipファイルをダウンロードして展開します ")
+  puts("---------------------------------------------")
+  dest = '/Users/n-takakura/swift/fastlaneTest01/'
+  content = open('https://github.com/kentaka7/fastlaneTest01/releases/download/1.0/Carthage.zip')
+  Zip::File.open_buffer(content) do |zip|
+  zip.each do |entry|
+    p entry.name
+    # { true } は展開先に同名ファイルが存在する場合に上書きする指定
+    zip.extract(entry, dest + entry.name) { true }
+  end
+  #ディレクトリ名を変更する
+  #File::rename(dest + "fastlaneTest01-1.0", dest + "Carthage")
+  #
+  #/usr/local/bin/carthage copy-frameworks
+
+end
+
+
+end
 
 default_platform(:ios)
 
@@ -8,8 +35,9 @@ platform :ios do
     puts("-----------------------")
     puts("最初に呼び出されますよ #{lane}")
     puts("-----------------------")
+    download_zip("テストちう")
     cocoapods(clean: true, podfile: "./Podfile")
-    carthage
+    #carthage
   end
 
   before_each do

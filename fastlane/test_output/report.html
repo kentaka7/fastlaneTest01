@@ -110,7 +110,9 @@
       </section>
       <section class="right">
         <section id="counters">
-          <h2 id="test-count"><span class="number">3</span> tests</h2>
+          <h2 id="test-count"><span class="number">1</span> tests</h2>
+          
+            <h2 id="fail-count"><span class="number">1</span> failures</h2>
           
         </section>
         <section id="segment-bar">
@@ -121,7 +123,7 @@
     <section id="test-suites">
       
         
-        <section class="test-suite passing" id="fastlaneTest01UITests.fastlaneTest01UITests">
+        <section class="test-suite failing" id="fastlaneTest01UITests.fastlaneTest01UITests">
           <section class="heading" onclick="toggleTests(this);">
             <h3 class="title">fastlaneTest01UITests.fastlaneTest01UITests</h3>
           </section>
@@ -129,48 +131,26 @@
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('testExample');">
+              <tr class="test failing "  onclick="toggleDetails('testExample');">
                 <td>
-                  
-                    <h3 class="time">3.159s</h3>
                   
                 </td>
                 <td><h3 class="title">testExample</h3></td>
               </tr>
               
-            
-            </table>
-          </section>
-        </section>
-      
-        
-        <section class="test-suite passing" id="fastlaneTest01Tests.fastlaneTest01Tests">
-          <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">fastlaneTest01Tests.fastlaneTest01Tests</h3>
-          </section>
-          <section class="tests">
-            <table>
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('testExample');">
-                <td>
-                  
-                    <h3 class="time">0.001s</h3>
-                  
-                </td>
-                <td><h3 class="title">testExample</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('testPerformanceExample');">
-                <td>
-                  
-                    <h3 class="time">0.365s</h3>
-                  
-                </td>
-                <td><h3 class="title">testPerformanceExample</h3></td>
-              </tr>
+                <tr class="details failing testExample">
+                  <td></td>
+                  <td>
+                    
+                      <section class="test-detail reason">fastlaneTest01 crashed in <external symbol></section>
+                    
+                    
+                      <section class="test-detail snippet"></section>
+                      <section class="test-detail"><unknown>:0</section>
+                    
+                    
+                  </td>
+                </tr>
               
             
             </table>
