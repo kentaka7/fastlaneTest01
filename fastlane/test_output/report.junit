@@ -1,8 +1,2 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='fastlaneTest01UITests.xctest' tests='1' failures='1'>
-  <testsuite name='fastlaneTest01UITests.fastlaneTest01UITests' tests='1' failures='1'>
-    <testcase classname='fastlaneTest01UITests.fastlaneTest01UITests' name='testExample'>
-      <failure message='fastlaneTest01 crashed in &lt;external symbol&gt;'>&lt;unknown&gt;:0</failure>
-    </testcase>
-  </testsuite>
-</testsuites>
+<testsuites tests='0' failures='0'/>
