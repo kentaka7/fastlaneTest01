@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		311C58EA239651D30086E6D4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311C58E9239651D30086E6D4 /* NotificationService.swift */; };
 		311C58EE239651D30086E6D4 /* fastlaneTest01Notification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 311C58E7239651D30086E6D4 /* fastlaneTest01Notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3122A6A323979507009731CC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3122A6A223979507009731CC /* RxCocoa.framework */; };
 		31850DBD23960C7A005BB1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31850DBC23960C7A005BB1C5 /* AppDelegate.swift */; };
 		31850DBF23960C7A005BB1C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31850DBE23960C7A005BB1C5 /* ViewController.swift */; };
 		31850DC223960C7A005BB1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31850DC023960C7A005BB1C5 /* Main.storyboard */; };
@@ -17,6 +16,9 @@
 		31850DC723960C7C005BB1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31850DC523960C7C005BB1C5 /* LaunchScreen.storyboard */; };
 		31850DD223960C7C005BB1C5 /* fastlaneTest01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31850DD123960C7C005BB1C5 /* fastlaneTest01Tests.swift */; };
 		31850DDD23960C7C005BB1C5 /* fastlaneTest01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31850DDC23960C7C005BB1C5 /* fastlaneTest01UITests.swift */; };
+		31AF65CE239E512200652D82 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AF65CD239E512200652D82 /* RxSwift.framework */; };
+		31AF65CF239E51AA00652D82 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AF65C6239E460400652D82 /* APIKit.framework */; };
+		31AF65D2239E520A00652D82 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AF65D1239E520A00652D82 /* Result.framework */; };
 		9C1B18F861E9F8798B40D6FA /* Pods_fastlaneTest01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A05CAF5007955100E62E48 /* Pods_fastlaneTest01.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,9 @@
 		31850DD823960C7C005BB1C5 /* fastlaneTest01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fastlaneTest01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31850DDC23960C7C005BB1C5 /* fastlaneTest01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fastlaneTest01UITests.swift; sourceTree = "<group>"; };
 		31850DDE23960C7C005BB1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31AF65C6239E460400652D82 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		31AF65CD239E512200652D82 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		31AF65D1239E520A00652D82 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		453A9518D8D96D61E0BB136F /* Pods-fastlaneTest01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastlaneTest01.release.xcconfig"; path = "Target Support Files/Pods-fastlaneTest01/Pods-fastlaneTest01.release.xcconfig"; sourceTree = "<group>"; };
 		769AD87AD8EC143B0FFA200E /* Pods-fastlaneTest01.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastlaneTest01.adhoc.xcconfig"; path = "Target Support Files/Pods-fastlaneTest01/Pods-fastlaneTest01.adhoc.xcconfig"; sourceTree = "<group>"; };
 		CA1966A3D97EE4F5E023E1A9 /* Pods-fastlaneTest01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastlaneTest01.debug.xcconfig"; path = "Target Support Files/Pods-fastlaneTest01/Pods-fastlaneTest01.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,8 +102,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AF65D2239E520A00652D82 /* Result.framework in Frameworks */,
+				31AF65CF239E51AA00652D82 /* APIKit.framework in Frameworks */,
+				31AF65CE239E512200652D82 /* RxSwift.framework in Frameworks */,
 				9C1B18F861E9F8798B40D6FA /* Pods_fastlaneTest01.framework in Frameworks */,
-				3122A6A323979507009731CC /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +214,9 @@
 		DB0BA069D92535B8AB5A7E31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31AF65D1239E520A00652D82 /* Result.framework */,
+				31AF65CD239E512200652D82 /* RxSwift.framework */,
+				31AF65C6239E460400652D82 /* APIKit.framework */,
 				3122A6A223979507009731CC /* RxCocoa.framework */,
 				06A05CAF5007955100E62E48 /* Pods_fastlaneTest01.framework */,
 			);
@@ -403,6 +413,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			name = Carthage;
@@ -412,7 +425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		4EB71B92CE33499B96E73697 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

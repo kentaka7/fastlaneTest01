@@ -8,3 +8,5 @@ gem 'danger-swiftlint', '~> 0.18.2'
 gem 'danger-xcov', '~> 0.4.1'
 gem 'danger-xcode_summary', '~> 0.5.0'
 gem 'xcpretty-json-formatter', '~> 0.1.1'
+gem "octokit", "~> 4.0"
+gem 'dotenv'
